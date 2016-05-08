@@ -1,5 +1,5 @@
 
-tree grammar LimeGen;
+tree grammar LimeTree;
 
 options {
     tokenVocab=LimeParser;
@@ -14,7 +14,7 @@ options {
 @members {
     SymbolTable symtab;
     Scope currentScope;
-    public LimeGen(TreeNodeStream input, SymbolTable symtab) {
+    public LimeTree(TreeNodeStream input, SymbolTable symtab) {
         this(input);
         this.symtab = symtab;
         currentScope = symtab.globals;
