@@ -1,34 +1,14 @@
 	.text
-	.file	"PQ-add.ll"
-	.globl	pq_add
-	.align	16, 0x90
-	.type	pq_add,@function
 pq_add:                                 # @pq_add
-	.cfi_startproc
-# BB#0:
+
 	pushl	%ebx
-.Ltmp0:
-	.cfi_def_cfa_offset 8
 	pushl	%edi
-.Ltmp1:
-	.cfi_def_cfa_offset 12
 	pushl	%esi
-.Ltmp2:
-	.cfi_def_cfa_offset 16
 	subl	$16, %esp
-.Ltmp3:
-	.cfi_def_cfa_offset 32
-.Ltmp4:
-	.cfi_offset %esi, -16
-.Ltmp5:
-	.cfi_offset %edi, -12
-.Ltmp6:
-	.cfi_offset %ebx, -8
 	movl	36(%esp), %edi
 	movl	32(%esp), %esi
 	movl	$1, %ebx
 	jmp	.LBB0_1
-	.align	16, 0x90
 .LBB0_3:                                # %PQadd_unlockreturn
                                         #   in Loop: Header=BB0_1 Depth=1
 	movl	$0, 8(%esi)
@@ -61,24 +41,12 @@ pq_add:                                 # @pq_add
 	popl	%edi
 	popl	%ebx
 	retl
-.Ltmp7:
-	.size	pq_add, .Ltmp7-pq_add
-	.cfi_endproc
 
-	.globl	pq_doAdd
-	.align	16, 0x90
-	.type	pq_doAdd,@function
 pq_doAdd:                               # @pq_doAdd
-	.cfi_startproc
-# BB#0:
+	
 	pushl	%esi
-.Ltmp8:
-	.cfi_def_cfa_offset 8
+
 	subl	$8, %esp
-.Ltmp9:
-	.cfi_def_cfa_offset 16
-.Ltmp10:
-	.cfi_offset %esi, -8
 	movl	16(%esp), %esi
 	cmpl	$1, 20(%esi)
 	jne	.LBB1_5
@@ -106,29 +74,12 @@ pq_doAdd:                               # @pq_doAdd
 	addl	$8, %esp
 	popl	%esi
 	retl
-.Ltmp11:
-	.size	pq_doAdd, .Ltmp11-pq_doAdd
-	.cfi_endproc
 
-	.globl	pq_doAction
-	.align	16, 0x90
-	.type	pq_doAction,@function
 pq_doAction:                            # @pq_doAction
-	.cfi_startproc
-# BB#0:
 	pushl	%edi
-.Ltmp12:
-	.cfi_def_cfa_offset 8
 	pushl	%esi
-.Ltmp13:
-	.cfi_def_cfa_offset 12
 	pushl	%eax
-.Ltmp14:
-	.cfi_def_cfa_offset 16
-.Ltmp15:
-	.cfi_offset %esi, -12
-.Ltmp16:
-	.cfi_offset %edi, -8
+
 	movl	16(%esp), %esi
 	movl	$1, %edi
 	jmp	.LBB2_1
